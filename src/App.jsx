@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ToDo from "./pages/ToDo";
@@ -11,7 +11,7 @@ import TaskProvider from "./context/TaskContext";
 function App() {
   return (
     <TaskProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/homepage" element={<HomePage />} />
@@ -20,7 +20,7 @@ function App() {
           <Route path="/done" element={<Done />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TaskProvider>
   );
 }
